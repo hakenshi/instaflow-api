@@ -1,0 +1,4 @@
+[mcp_servers.laravel-boost]
+command = "wsl.exe"
+args = ["/home/lonely/.config/herd-lite/bin/php", "/home/lonely/Documents/projects/Instaflow/artisan", "boost:mcp"]
+cwd = "/home/lonely/Documents/projects/Instaflow"
