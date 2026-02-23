@@ -1,9 +1,6 @@
 [build]
-# Specify the PHP version
 NIXPACKS_PHP_VERSION = "8.4"
-# Optional: Define a custom install command if needed
-installCommand = "composer install --no-dev"
+installCommand = "composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader"
 
 [deploy]
-# Optional: Define a custom start command for your application
-startCommand = "php artisan serve --port=$PORT"
+startCommand = "php -S 0.0.0.0:${PORT:-8080} -t public"
