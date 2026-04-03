@@ -3,4 +3,5 @@ NIXPACKS_PHP_VERSION = "8.4"
 installCommand = "composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader"
 
 [deploy]
-startCommand = "php -S 0.0.0.0:${PORT:-8080} -t public"
+preDeployCommand = "php artisan migrate --force"
+startCommand = "php -S 0.0.0.0:8080 -t public"
